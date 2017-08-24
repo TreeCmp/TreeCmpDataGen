@@ -93,6 +93,11 @@ else:
 # creating trees database files if not exist #
 ##############################################
 
+if not os.path.exists("data"):
+    os.makedirs("data")
+if not os.path.exists("newicks"):
+    os.makedirs("newicks")
+
 for n in range(beg, end+1):
     inputTreesPath = "newicks/n" + str(n) + "_" + treesType + "_trees.newick"
     if not os.path.exists(inputTreesPath):

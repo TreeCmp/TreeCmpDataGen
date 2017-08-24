@@ -1,0 +1,140 @@
+<?xml version = "1.0" ?>
+<config>
+    <defined_metrics>
+        <metric> 
+            <name>MatchingSplit</name>
+            <command_name>ms</command_name>
+            <class>treecmp.metric.MatchingSplitMetric</class>
+            <description>-Matching Split metric</description>
+            <unif_data>unif_MS.txt</unif_data>
+            <yule_data>yule_MS.txt</yule_data>
+            <aln_file_suffix>.aln_MS.txt</aln_file_suffix>
+            <fullname>Matching Split distance</fullname>
+            <complexity>|L|^2.5*log|L|</complexity>
+        </metric>
+        <metric>
+            <name>R-F</name>
+            <command_name>rf</command_name>
+            <class>treecmp.metric.RFMetric</class>
+            <description>-Robinson-Foulds metric</description>
+            <unif_data>unif_RF.txt</unif_data>
+            <yule_data>yule_RF.txt</yule_data>
+            <fullname>Robinson-Foulds distance</fullname>
+            <complexity></complexity>
+        </metric>
+        <metric>
+            <name>PathDiffernce</name>
+            <command_name>pd</command_name>
+            <class>treecmp.metric.NodalL2Metric</class>
+            <description>-Path Difference metric</description>
+            <unif_data>unif_PD.txt</unif_data>
+            <yule_data>yule_PD.txt</yule_data>
+            <fullname>Path difference distance</fullname>
+            <complexity></complexity>
+        </metric>
+        <metric>
+            <name>Quartet</name>
+            <command_name>qt</command_name>
+            <class>treecmp.metric.QuartetMetricLong</class>
+            <description>-Quartet metric</description>
+            <unif_data>unif_QT.txt</unif_data>
+            <yule_data>yule_QT.txt</yule_data>
+            <fullname>Quartet distance</fullname>
+            <complexity></complexity>
+        </metric>
+        <metric>
+            <name>UMAST</name>
+            <command_name>um</command_name>
+            <class>treecmp.metric.UmastMetric</class>
+            <description>-Unrooted maximum agreement subtree distance</description>
+            <unif_data>unif_MT.txt</unif_data>
+            <yule_data>yule_MT.txt</yule_data>
+            <fullname>UMAST</fullname>
+            <complexity></complexity>
+        </metric>
+        <metric>
+            <name>WeightedR-F</name>
+            <command_name>wrf</command_name>
+            <class>treecmp.metric.WRFMetric</class>
+            <description>-Weighted Robinson-Foulds metric</description>
+            <unif_data>unif_WRF.txt</unif_data>
+            <yule_data>yule_WRF.txt</yule_data>
+            <fullname>Weighted Robinson-Foulds metric</fullname>
+            <complexity></complexity>
+        </metric>
+        <metric>
+            <name>MatchingCluster</name>
+            <command_name>mc</command_name>
+            <class>treecmp.metric.MatchingClusterMetric</class>
+            <description>-Matching Cluster metric</description>
+            <unif_data>unif_MC.txt</unif_data>
+            <yule_data>yule_MC.txt</yule_data>
+            <aln_file_suffix>.aln_MC.txt</aln_file_suffix>
+            <rooted>true</rooted>
+            <fullname>Matching Cluster metric</fullname>
+            <complexity>|L|^2.5*log|L|</complexity>
+        </metric>
+        <metric>
+            <name>R-F_Cluster</name>
+            <command_name>rc</command_name>
+            <class>treecmp.metric.RFClusterMetric</class>
+            <description>-Robinson-Foulds Cluster metric </description>
+            <unif_data>unif_RC.txt</unif_data>
+            <yule_data>yule_RC.txt</yule_data>
+            <rooted>true</rooted>
+            <fullname>Robinson-Foulds metric based on clusters</fullname>
+            <complexity></complexity>
+        </metric>
+        <metric>
+            <name>NodalSplitted</name>
+            <command_name>ns</command_name>
+            <class>treecmp.metric.NodalL2SplittedMetric</class>
+            <description>-Nodal Splitted metric</description>
+            <unif_data>unif_NS.txt</unif_data>
+            <yule_data>yule_NS.txt</yule_data>
+            <rooted>true</rooted>
+            <fullname>Nodal Splitted metric with L2 norm</fullname>
+            <complexity></complexity>
+        </metric>
+        <metric>
+            <name>Triples</name>
+            <command_name>tt</command_name>
+            <class>treecmp.metric.TripletMetric</class>
+            <description>-Triplet metric </description>
+            <unif_data>unif_TT.txt</unif_data>
+            <yule_data>yule_TT.txt</yule_data>
+            <rooted>true</rooted>
+            <fullname>Triples metric</fullname>
+            <complexity></complexity>
+        </metric>
+        <metric> 
+            <name>MatchingPair</name>
+            <command_name>mp</command_name>
+            <class>treecmp.metric.MatchingPairMetric</class>
+            <description>-Matching Pair metric</description>
+            <unif_data>unif_MP.txt</unif_data>
+            <yule_data>yule_MP.txt</yule_data>
+            <rooted>true</rooted>
+            <fullname>Matching Pair metric</fullname>
+            <complexity></complexity>
+        </metric>
+        <metric>
+        </metric>
+		<metric>
+            <name>MAST</name>
+            <command_name>mt</command_name>
+            <class>treecmp.metric.RMASTMetric</class>
+            <description>-Maximum agreement subtree distance</description>
+            <unif_data>unif_MT.txt</unif_data>
+            <yule_data>yule_MT.txt</yule_data>
+			<rooted>true</rooted>
+            <fullname>RMAST</fullname>
+            <complexity></complexity>
+        </metric>
+    </defined_metrics>
+    <reporting>
+        <filed_separator>tab</filed_separator>
+        <main-section>yes</main-section>
+        <summary-section>yes</summary-section>
+    </reporting>
+</config>

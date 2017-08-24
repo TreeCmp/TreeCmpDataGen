@@ -1,3 +1,10 @@
+# Newick files
+*.newick
+
+# Data files
+*.csv
+*.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

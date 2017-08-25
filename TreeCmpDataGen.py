@@ -108,6 +108,7 @@ for n in range(beg, end+1):
 ###################
 
 data = [[] for i in range(end-MIN_N+1)]
+newData = []
 
 if os.path.exists(dataFilePath):
     with open(dataFilePath, 'r') as csvFile:
@@ -132,22 +133,25 @@ while True:
 
     outFile = open(outFilePath, 'r')
     outFileLines = outFile.readlines()
+    newData.clear()
 
     for i in range(1, len(outFileLines)):
         res = outFileLines[i].split("\t")
         if resultType == "int":
-            data[n-MIN_N].append(int(float(res[3].replace('\n', ''))))
+            newData.append(int(float(res[3].replace('\n', ''))))
         elif resultType == "float":
-            data[n-MIN_N].append(float(res[3].replace('\n', '')))
+            newData.append(float(res[3].replace('\n', '')))
         else:
             print("Undefined result type")
             exit(1)
 
-    inputTreesFile = open(inputTreesPath, "a")
-    refTreeFile = open(refTreePath, "r")
-    inputTreesFile.write(refTreeFile.read())
-    inputTreesFile.close()
-    refTreeFile.close()
+    if 0 not in newData:
+        data[n-MIN_N].extend(newData)
+        inputTreesFile = open(inputTreesPath, "a")
+        refTreeFile = open(refTreePath, "r")
+        inputTreesFile.write(refTreeFile.read())
+        inputTreesFile.close()
+        refTreeFile.close()
 
     if n == end:
         if it == itNum:
